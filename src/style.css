@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,486;1,486&display=swap');
+
+html, body, #app {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Playfair Display", serif;
+    overflow: hidden;
+    background-color: #FFAF91;
+}
+
+.startowa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100%;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+
+.startowa > h3 {
+    margin-top: 0;
+    margin-bottom: 80px;
+    padding-top: 10px;
+    padding-left: 40px;
+    font-size: 1.5rem;
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.tekst {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.tekst h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.guziki {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.zglos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    padding: 0.78rem;
+    border-radius: 70px;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+    font-family: "Playfair Display", serif;
+}
+
+.zglos h3 {
+    margin: 0;
+    padding-left: 0.5rem;
+}
+
+.zglos:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.zglos:active {
+    transform: scale(0.95);
+}
+
+#github {
+    background-color: #6B6A85;
+}
+
+#forms {
+    background-color: #BD82FF;
+}
+
+.pic {
+    height: 3rem;
+    width: 3rem;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .startowa {
+        padding: 24px 0;
+    }
+
+    .startowa > h3 {
+        margin-bottom: 40px;
+        padding-left: 24px;
+    }
+
+    section {
+        padding: 0 24px;
+    }
+
+    .tekst {
+        font-size: 2rem;
+    }
+    
+    .guziki {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .zglos {
+        width: 100%;
+        max-width: 22rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .startowa > h3 {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+        padding-left: 16px;
+    }
+
+    .startowa {
+        padding: 16px 0;
+    }
+
+    section {
+        padding: 0 16px;
+    }
+    
+    .tekst {
+        font-size: 1.6rem;
+    }
+    
+    .pic {
+        height: 2.2rem;
+        width: 2.2rem;
+    }
+    
+    .zglos {
+        font-size: 0.9rem;
+    }
+}
