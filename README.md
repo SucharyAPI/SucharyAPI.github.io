@@ -1,2 +1,2 @@
-# SucharyAPI.github.io
+# SucharyAPI
 Oficjalna strona projektu SucharyAPI
