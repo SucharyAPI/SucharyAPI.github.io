@@ -11,10 +11,10 @@
     </head>
     <body>
         <main>
-            <section class="sekcja-instalacji">
+            <section class="sekcja-instalacji"> <!-- SucharyCLI -->
                 <div class="naglowek-sekcji">
                     <h1>Narzędzie SucharyCLI</h1>
-                    <a href="https://github.com/SucharyAPI/suchary-cli" class="link-sekcji"><img src="../assets/ikonka-link.png"></a>
+                    <a href="https://github.com/SucharyAPI/suchary-cli" class="link-sekcji"><img src="../assets/ikonka-link.svg"></a>
                 </div>
                 <div>
                     <h2>1. Instalacja</h2>
@@ -33,10 +33,165 @@
                 </figure>
             </section>
             <hr class="oddzielacz">
-            <section class="sekcja-instalacji">
+            <section class="sekcja-instalacji"> <!-- SucharyPL - Ruby -->
+                <div class="naglowek-sekcji">
+                    <h1>Biblioteka SucharyPL - Ruby</h1>
+                    <a href="https://github.com/SucharyAPI/sucharypl-ruby" class="link-sekcji"><img src="../assets/ikonka-link.svg"></a>
+                </div>
+                <article class="sekcja-poziomo">
+                    <div>
+                        <h2>1. Instalacja</h2>
+                        <figure>
+                            <h3>Za pomocą gem (globalnie)</h3>
+                            <pole-kodu>gem install sucharyruby</pole-kodu>
+                        </figure>
+                        <figure>
+                            <h3>Za pomocą bundlera (w projekcie)</h3>
+                            <pole-kodu>bundle add sucharyruby</pole-kodu>
+                        </figure>
+                    </div>
+                    <div>
+                        <h2>2. Wywołanie żartu</h2>
+                        <figure>
+<pole-kodu>require "sucharyruby"
 
+suchar = Sucharyruby.dajKawal
+puts suchar</pole-kodu>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+            <hr class="oddzielacz">
+            <section class="sekcja-instalacji"> <!-- SucharyPL - Go -->
+                <div class="naglowek-sekcji">
+                    <h1>Biblioteka SucharyPL - Go</h1>
+                    <a href="https://github.com/SucharyAPI/sucharypl-go" class="link-sekcji"><img src="../assets/ikonka-link.svg"></a>
+                </div>
+                <article>
+                    <div>
+                        <h2>1. Instalacja</h2>
+                        <figure>
+                            <h3>Za pomocą go get</h3>
+                            <pole-kodu>go get github.com/SucharyAPI/sucharypl-go</pole-kodu>
+                        </figure>
+                    </div>
+                    <div>
+                        <h2>2. Wywołanie żartu</h2>
+                        <figure>
+<pole-kodu>package main
+
+import (
+    "fmt"
+    "log"
+
+    sucharygo "github.com/SucharyAPI/sucharypl-go"
+)
+
+func main() {
+    zart, err := sucharygo.DajKawal()
+    if err != nil {
+        log.Fatalf("Błąd: %v", err)
+    }
+    fmt.Println(zart)
+}</pole-kodu>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+            <hr class="oddzielacz">
+            <section class="sekcja-instalacji"> <!-- SucharyPL - Dart -->
+                <div class="naglowek-sekcji">
+                    <h1>Biblioteka SucharyPL - Dart</h1>
+                    <a href="https://github.com/SucharyAPI/sucharypl-dart" class="link-sekcji"><img src="../assets/ikonka-link.svg"></a>
+                </div>
+                <article class="sekcja-poziomo">
+                    <div>
+                        <h2>1. Instalacja</h2>
+                        <figure>
+                            <h3>Za pomocą dart pub</h3>
+                            <pole-kodu>dart pub add sucharydart</pole-kodu>
+                        </figure>
+                        <figure>
+                            <h3>Za pomocą flutter</h3>
+                            <pole-kodu>flutter pub add sucharydart</pole-kodu>
+                        </figure>
+                    </div>
+                    <div>
+                        <h2>2. Wywołanie żartu</h2>
+                        <figure>
+<pole-kodu>import 'package:sucharydart/sucharydart.dart';
+
+void main() async {
+  final suchar = await dajKawal();
+  print(suchar);
+}</pole-kodu>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+            <hr class="oddzielacz">
+            <section class="sekcja-instalacji"> <!-- SucharyPL - JS -->
+                <div class="naglowek-sekcji">
+                    <h1>Biblioteka SucharyPL - JS</h1>
+                    <a href="https://github.com/SucharyAPI/sucharypl-js" class="link-sekcji"><img src="../assets/ikonka-link.svg"></a>
+                </div>
+                <article class="sekcja-poziomo">
+                    <div>
+                        <h2>1. Instalacja</h2>
+                        <figure>
+                            <h3>Za pomocą npm</h3>
+                            <pole-kodu>npm install sucharyjs</pole-kodu>
+                        </figure>
+                        <figure>
+                            <h3>Za pomocą Bun</h3>
+                            <pole-kodu>bun add sucharyjs</pole-kodu>
+                        </figure>
+                    </div>
+                    <div>
+                        <h2>2. Wywołanie żartu</h2>
+                        <figure>
+<pole-kodu>import { dajKawal } from 'sucharyjs';
+
+const suchar = await dajKawal();
+console.log(suchar);</pole-kodu>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+            <hr class="oddzielacz">
+            <section class="sekcja-instalacji"> <!-- SucharyPL - Python -->
+                <div class="naglowek-sekcji">
+                    <h1>Biblioteka SucharyPL - Python</h1>
+                    <a href="https://github.com/SucharyAPI/sucharypl-python" class="link-sekcji"><img src="../assets/ikonka-link.svg"></a>
+                </div>
+                <article class="sekcja-poziomo">
+                    <div>
+                        <h2>1. Instalacja</h2>
+                        <figure>
+                            <h3>Za pomocą pip</h3>
+                            <pole-kodu>pip install sucharypython</pole-kodu>
+                        </figure>
+                        <figure>
+                            <h3>Za pomocą uv (w projekcie)</h3>
+                            <pole-kodu>uv add sucharypython</pole-kodu>
+                        </figure>
+                    </div>
+                    <div>
+                        <h2>2. Wywołanie żartu</h2>
+                        <figure>
+<pole-kodu>from sucharypython import dajKawal
+
+suchar = dajKawal()
+print(suchar)</pole-kodu>
+                        </figure>
+                    </div>
+                </article>
             </section>
         </main>
+        <div style="height: 8rem;"></div>
+        <footer class="stopka-zastrzezenia">
+            <p>&copy; 2026 SucharyAPI. Wszelkie prawa zastrzeżone.</p>
+        </footer>
 
         <script type="module" src="../scripts/szybki-start.ts"></script>
     </body>

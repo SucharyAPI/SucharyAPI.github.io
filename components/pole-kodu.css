@@ -9,7 +9,7 @@ pole-kodu {
 
 .kontener-pola-kodu {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 0.5rem;
 }
@@ -20,11 +20,13 @@ pole-kodu {
 }
 
 .tresc-pola {
+    display: block;
     background-color: rgb(50, 48, 48);
     color: rgb(0, 216, 0);
     padding: 0.6rem;
     font-size: 1.6rem;
     border-radius: 0.9rem;
+    white-space: pre;
 }
 
 .guzik-kopiuj-pola-kodu {
@@ -36,6 +38,7 @@ pole-kodu {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 .guzik-kopiuj-pola-kodu:hover {
     transform: scale(1.05);

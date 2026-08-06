@@ -6,7 +6,7 @@ class PoleKodu extends HTMLElement {
         this.innerHTML = `
             <div class="kontener-pola-kodu">
                 <pre><code class="tresc-pola">${zawartosc}</code></pre>
-                <button class="guzik-kopiuj-pola-kodu"><img src="../assets/ikonka-kopiuj.png"></button>
+                <button class="guzik-kopiuj-pola-kodu"><img src="../assets/ikonka-kopiuj.svg"></button>
             </div>
         `;
     }
