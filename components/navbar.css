@@ -22,6 +22,7 @@ nav {
     margin: 0;
     padding: 0.15rem;
     color: white;
+    cursor: default;
 }
 
 .tekst-suchary {
