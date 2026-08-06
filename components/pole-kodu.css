@@ -1,0 +1,45 @@
+/* Arkusz stylów komponentu pola kodu */
+:root {
+    --wymiary-kopiuj: 2.94rem;
+}
+
+pole-kodu {
+    display: inline-block;
+}
+
+.kontener-pola-kodu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.kontener-pola-kodu pre {
+    margin: 0;
+    padding: 0;
+}
+
+.tresc-pola {
+    background-color: rgb(50, 48, 48);
+    color: rgb(0, 216, 0);
+    padding: 0.6rem;
+    font-size: 1.6rem;
+    border-radius: 0.9rem;
+}
+
+.guzik-kopiuj-pola-kodu {
+    width: var(--wymiary-kopiuj);
+    height: var(--wymiary-kopiuj);
+    border: 0.27rem solid maroon;
+    border-radius: 26%;
+    background-color: rgb(255, 152, 185);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.guzik-kopiuj-pola-kodu:hover {
+    transform: scale(1.05);
+}
+.guzik-kopiuj-pola-kodu:active {
+    transform: scale(0.95);
+}

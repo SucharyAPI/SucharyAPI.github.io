@@ -1,3 +1,4 @@
+<!-- Plik HTML strony szybkiego startu -->
 <!DOCTYPE html>
 <html lang="pl">
     <head>
@@ -6,9 +7,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../style/main.css">
         <link rel="stylesheet" href="../style/szybki-start.css">
+        <link rel="stylesheet" href="../components/pole-kodu.css"> <!-- CSS komponentu PoleKodu -->
     </head>
     <body>
+        <main>
+            <section class="sekcja-instalacji">
+                <div class="naglowek-sekcji">
+                    <h1>Narzędzie SucharyCLI</h1>
+                    <a href="https://github.com/SucharyAPI/suchary-cli" class="link-sekcji"><img src="../assets/ikonka-link.png"></a>
+                </div>
+                <div>
+                    <h2>1. Instalacja</h2>
+                    <figure>
+                        <h3>Linux/macOS (UNIX)</h3>
+                        <pole-kodu>curl -fsSL https://raw.githubusercontent.com/SucharyAPI/suchary-cli/main/install.sh | sh</pole-kodu>
+                    </figure>
+                    <figure>
+                        <h3>Windows</h3>
+                        <pole-kodu>irm https://raw.githubusercontent.com/SucharyAPI/suchary-cli/main/install.ps1 | iex</pole-kodu>
+                    </figure>
+                </div>
+                <h2>2. Wywołanie żartu</h2>
+                <figure>
+                    <pole-kodu>suchar</pole-kodu>
+                </figure>
+            </section>
+            <hr class="oddzielacz">
+            <section class="sekcja-instalacji">
 
+            </section>
+        </main>
 
         <script type="module" src="../scripts/szybki-start.ts"></script>
     </body>

@@ -1,1 +1,31 @@
 /* Arkusz stylów strony szybkiego startu */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sekcja-instalacji h1 {
+    font-size: 2.5rem;
+}
+
+.oddzielacz {
+    width: 85%;
+    height: 0.15rem;
+    background-color: maroon;
+}
+
+.naglowek-sekcji {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-sekcji:hover {
+    transform: scale(1.08);
+}
+.link-sekcji:active {
+    transform: scale(0.95);
+}
