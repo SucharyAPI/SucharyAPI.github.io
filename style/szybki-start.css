@@ -27,6 +27,9 @@ main {
     align-items: center;
 }
 
+.link-sekcji {
+    transition: transform 0.15s ease-in-out, background-color 0.2s ease;
+}
 .link-sekcji:hover {
     transform: scale(1.08);
 }

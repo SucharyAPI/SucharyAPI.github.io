@@ -39,10 +39,27 @@ pole-kodu {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out, background-color 0.2s ease;
 }
 .guzik-kopiuj-pola-kodu:hover {
     transform: scale(1.05);
 }
 .guzik-kopiuj-pola-kodu:active {
     transform: scale(0.95);
+}
+
+@keyframes animacja-skopiowania {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.25) rotate(12deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+.efekt-skopiowano {
+    animation: animacja-skopiowania 0.3s ease-in-out;
 }

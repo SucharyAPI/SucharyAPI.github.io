@@ -9,6 +9,23 @@ class PoleKodu extends HTMLElement {
                 <button class="guzik-kopiuj-pola-kodu"><img src="../assets/ikonka-kopiuj.svg"></button>
             </div>
         `;
+        const guzik = this.querySelector('.guzik-kopiuj-pola-kodu');
+        guzik?.addEventListener('click', () => this.skopiujTresc());
+    }
+
+    private async skopiujTresc(): Promise<void> {
+        const tekst = this.querySelector('.tresc-pola')?.textContent || '';
+        await navigator.clipboard.writeText(tekst);
+
+        const obrazek = this.querySelector('.guzik-kopiuj-pola-kodu img') as HTMLImageElement;
+        if (obrazek) {
+            obrazek.src = "../assets/ikonka-ptaszek.svg";
+            obrazek.classList.add('efekt-skopiowano');
+            setTimeout(() => {
+                obrazek.src = "../assets/ikonka-kopiuj.svg";
+                obrazek.classList.remove('efekt-skopiowano');
+            }, 1500)
+        }
     }
 }
 
