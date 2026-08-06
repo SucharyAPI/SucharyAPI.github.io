@@ -12,7 +12,7 @@ export function renderujNavbar(): void {
             </div>
             <nav>
                 <a href="/" class="navbar-guziki">Główna</a>
-                <a href="/start/" class="navbar-guziki">Szybki start</a>
+                <a href="/szybki-start/" class="navbar-guziki">Szybki start</a>
                 <a href="/zglos/" class="navbar-guziki">Zgłoś kawał</a>
                 <a href="/kontakt/" class="navbar-guziki">Kontakt</a>
             </nav>
