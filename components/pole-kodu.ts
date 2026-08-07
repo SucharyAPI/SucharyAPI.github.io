@@ -6,7 +6,7 @@ class PoleKodu extends HTMLElement {
         this.innerHTML = `
             <div class="kontener-pola-kodu">
                 <pre><code class="tresc-pola">${zawartosc}</code></pre>
-                <button class="guzik-kopiuj-pola-kodu"><img src="/public/ikonka-kopiuj.svg"></button>
+                <button class="guzik-kopiuj-pola-kodu"><img src="/ikonka-kopiuj.svg"></button>
             </div>
         `;
         const guzik = this.querySelector('.guzik-kopiuj-pola-kodu');
@@ -19,10 +19,10 @@ class PoleKodu extends HTMLElement {
 
         const obrazek = this.querySelector('.guzik-kopiuj-pola-kodu img') as HTMLImageElement;
         if (obrazek) {
-            obrazek.src = "/public/ikonka-ptaszek.svg";
+            obrazek.src = "/ikonka-ptaszek.svg";
             obrazek.classList.add('efekt-skopiowano');
             setTimeout(() => {
-                obrazek.src = "../assets/ikonka-kopiuj.svg";
+                obrazek.src = "/ikonka-kopiuj.svg";
                 obrazek.classList.remove('efekt-skopiowano');
             }, 1500)
         }
