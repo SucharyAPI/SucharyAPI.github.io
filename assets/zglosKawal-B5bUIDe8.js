@@ -1,0 +1,1 @@
+import{t as e}from"./navbar-B0BNu5GW.js";e();var t=document.querySelector(`#github`),n=document.querySelector(`#forms`);function r(e){window.location.href=e}t?.addEventListener(`click`,()=>{r(`https://github.com/SucharyAPI/spolecznosc/issues/new?template=zglos-suchara.yml`)}),n?.addEventListener(`click`,()=>{r(`https://forms.gle/Ne8BKGWsoSdFiYLh8`)});

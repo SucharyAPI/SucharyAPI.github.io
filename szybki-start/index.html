@@ -1,0 +1,198 @@
+<!-- Plik HTML strony szybkiego startu -->
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Szybki start | SucharyAPI</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- CSS komponentu PoleKodu -->
+      <script type="module" crossorigin src="/assets/szybkiStart-DtBDc8vq.js"></script>
+      <link rel="modulepreload" crossorigin href="/assets/navbar-B0BNu5GW.js">
+      <link rel="stylesheet" crossorigin href="/assets/navbar-cbnjrsVB.css">
+      <link rel="stylesheet" crossorigin href="/assets/szybkiStart-C5yd9pYV.css">
+    </head>
+    <body>
+        <main>
+            <section class="sekcja-instalacji"> <!-- SucharyCLI -->
+                <div class="naglowek-sekcji">
+                    <h1>Narzędzie SucharyCLI</h1>
+                    <a href="https://github.com/SucharyAPI/suchary-cli" class="link-sekcji"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='48px'%20viewBox='0%20-960%20960%20960'%20width='48px'%20fill='%231f1f1f'%3e%3cpath%20d='M450-280H280q-83%200-141.5-58.5T80-480q0-83%2058.5-141.5T280-680h170v60H280q-58.33%200-99.17%2040.76-40.83%2040.77-40.83%2099Q140-422%20180.83-381q40.84%2041%2099.17%2041h170v60ZM325-450v-60h310v60H325Zm185%20170v-60h170q58.33%200%2099.17-40.76%2040.83-40.77%2040.83-99Q820-538%20779.17-579q-40.84-41-99.17-41H510v-60h170q83%200%20141.5%2058.5T880-480q0%2083-58.5%20141.5T680-280H510Z'/%3e%3c/svg%3e"></a>
+                </div>
+                <div>
+                    <h2>1. Instalacja</h2>
+                    <figure>
+                        <h3>Linux/macOS</h3>
+                        <pole-kodu>curl -fsSL https://raw.githubusercontent.com/SucharyAPI/suchary-cli/main/install.sh | sh</pole-kodu>
+                    </figure>
+                    <figure>
+                        <h3>Windows</h3>
+                        <pole-kodu>irm https://raw.githubusercontent.com/SucharyAPI/suchary-cli/main/install.ps1 | iex</pole-kodu>
+                    </figure>
+                </div>
+                <h2>2. Wywołanie żartu</h2>
+                <figure>
+                    <pole-kodu>suchar</pole-kodu>
+                </figure>
+            </section>
+            <hr class="oddzielacz">
+            <section class="sekcja-instalacji"> <!-- SucharyPL - Ruby -->
+                <div class="naglowek-sekcji">
+                    <h1>Biblioteka SucharyPL - Ruby</h1>
+                    <a href="https://github.com/SucharyAPI/sucharypl-ruby" class="link-sekcji"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='48px'%20viewBox='0%20-960%20960%20960'%20width='48px'%20fill='%231f1f1f'%3e%3cpath%20d='M450-280H280q-83%200-141.5-58.5T80-480q0-83%2058.5-141.5T280-680h170v60H280q-58.33%200-99.17%2040.76-40.83%2040.77-40.83%2099Q140-422%20180.83-381q40.84%2041%2099.17%2041h170v60ZM325-450v-60h310v60H325Zm185%20170v-60h170q58.33%200%2099.17-40.76%2040.83-40.77%2040.83-99Q820-538%20779.17-579q-40.84-41-99.17-41H510v-60h170q83%200%20141.5%2058.5T880-480q0%2083-58.5%20141.5T680-280H510Z'/%3e%3c/svg%3e"></a>
+                </div>
+                <article class="sekcja-poziomo">
+                    <div>
+                        <h2>1. Instalacja</h2>
+                        <figure>
+                            <h3>Za pomocą gem (globalnie)</h3>
+                            <pole-kodu>gem install sucharyruby</pole-kodu>
+                        </figure>
+                        <figure>
+                            <h3>Za pomocą bundlera (w projekcie)</h3>
+                            <pole-kodu>bundle add sucharyruby</pole-kodu>
+                        </figure>
+                    </div>
+                    <div>
+                        <h2>2. Wywołanie żartu</h2>
+                        <figure>
+<pole-kodu>require "sucharyruby"
+
+suchar = Sucharyruby.dajKawal
+puts suchar</pole-kodu>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+            <hr class="oddzielacz">
+            <section class="sekcja-instalacji"> <!-- SucharyPL - Go -->
+                <div class="naglowek-sekcji">
+                    <h1>Biblioteka SucharyPL - Go</h1>
+                    <a href="https://github.com/SucharyAPI/sucharypl-go" class="link-sekcji"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='48px'%20viewBox='0%20-960%20960%20960'%20width='48px'%20fill='%231f1f1f'%3e%3cpath%20d='M450-280H280q-83%200-141.5-58.5T80-480q0-83%2058.5-141.5T280-680h170v60H280q-58.33%200-99.17%2040.76-40.83%2040.77-40.83%2099Q140-422%20180.83-381q40.84%2041%2099.17%2041h170v60ZM325-450v-60h310v60H325Zm185%20170v-60h170q58.33%200%2099.17-40.76%2040.83-40.77%2040.83-99Q820-538%20779.17-579q-40.84-41-99.17-41H510v-60h170q83%200%20141.5%2058.5T880-480q0%2083-58.5%20141.5T680-280H510Z'/%3e%3c/svg%3e"></a>
+                </div>
+                <article>
+                    <div>
+                        <h2>1. Instalacja</h2>
+                        <figure>
+                            <h3>Za pomocą go get</h3>
+                            <pole-kodu>go get github.com/SucharyAPI/sucharypl-go</pole-kodu>
+                        </figure>
+                    </div>
+                    <div>
+                        <h2>2. Wywołanie żartu</h2>
+                        <figure>
+<pole-kodu>package main
+
+import (
+    "fmt"
+    "log"
+
+    sucharygo "github.com/SucharyAPI/sucharypl-go"
+)
+
+func main() {
+    zart, err := sucharygo.DajKawal()
+    if err != nil {
+        log.Fatalf("Błąd: %v", err)
+    }
+    fmt.Println(zart)
+}</pole-kodu>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+            <hr class="oddzielacz">
+            <section class="sekcja-instalacji"> <!-- SucharyPL - Dart -->
+                <div class="naglowek-sekcji">
+                    <h1>Biblioteka SucharyPL - Dart</h1>
+                    <a href="https://github.com/SucharyAPI/sucharypl-dart" class="link-sekcji"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='48px'%20viewBox='0%20-960%20960%20960'%20width='48px'%20fill='%231f1f1f'%3e%3cpath%20d='M450-280H280q-83%200-141.5-58.5T80-480q0-83%2058.5-141.5T280-680h170v60H280q-58.33%200-99.17%2040.76-40.83%2040.77-40.83%2099Q140-422%20180.83-381q40.84%2041%2099.17%2041h170v60ZM325-450v-60h310v60H325Zm185%20170v-60h170q58.33%200%2099.17-40.76%2040.83-40.77%2040.83-99Q820-538%20779.17-579q-40.84-41-99.17-41H510v-60h170q83%200%20141.5%2058.5T880-480q0%2083-58.5%20141.5T680-280H510Z'/%3e%3c/svg%3e"></a>
+                </div>
+                <article class="sekcja-poziomo">
+                    <div>
+                        <h2>1. Instalacja</h2>
+                        <figure>
+                            <h3>Za pomocą dart pub</h3>
+                            <pole-kodu>dart pub add sucharydart</pole-kodu>
+                        </figure>
+                        <figure>
+                            <h3>Za pomocą flutter</h3>
+                            <pole-kodu>flutter pub add sucharydart</pole-kodu>
+                        </figure>
+                    </div>
+                    <div>
+                        <h2>2. Wywołanie żartu</h2>
+                        <figure>
+<pole-kodu>import 'package:sucharydart/sucharydart.dart';
+
+void main() async {
+  final suchar = await dajKawal();
+  print(suchar);
+}</pole-kodu>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+            <hr class="oddzielacz">
+            <section class="sekcja-instalacji"> <!-- SucharyPL - JS -->
+                <div class="naglowek-sekcji">
+                    <h1>Biblioteka SucharyPL - JS</h1>
+                    <a href="https://github.com/SucharyAPI/sucharypl-js" class="link-sekcji"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='48px'%20viewBox='0%20-960%20960%20960'%20width='48px'%20fill='%231f1f1f'%3e%3cpath%20d='M450-280H280q-83%200-141.5-58.5T80-480q0-83%2058.5-141.5T280-680h170v60H280q-58.33%200-99.17%2040.76-40.83%2040.77-40.83%2099Q140-422%20180.83-381q40.84%2041%2099.17%2041h170v60ZM325-450v-60h310v60H325Zm185%20170v-60h170q58.33%200%2099.17-40.76%2040.83-40.77%2040.83-99Q820-538%20779.17-579q-40.84-41-99.17-41H510v-60h170q83%200%20141.5%2058.5T880-480q0%2083-58.5%20141.5T680-280H510Z'/%3e%3c/svg%3e"></a>
+                </div>
+                <article class="sekcja-poziomo">
+                    <div>
+                        <h2>1. Instalacja</h2>
+                        <figure>
+                            <h3>Za pomocą npm</h3>
+                            <pole-kodu>npm install sucharyjs</pole-kodu>
+                        </figure>
+                        <figure>
+                            <h3>Za pomocą Bun</h3>
+                            <pole-kodu>bun add sucharyjs</pole-kodu>
+                        </figure>
+                    </div>
+                    <div>
+                        <h2>2. Wywołanie żartu</h2>
+                        <figure>
+<pole-kodu>import { dajKawal } from 'sucharyjs';
+
+const suchar = await dajKawal();
+console.log(suchar);</pole-kodu>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+            <hr class="oddzielacz">
+            <section class="sekcja-instalacji"> <!-- SucharyPL - Python -->
+                <div class="naglowek-sekcji">
+                    <h1>Biblioteka SucharyPL - Python</h1>
+                    <a href="https://github.com/SucharyAPI/sucharypl-python" class="link-sekcji"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='48px'%20viewBox='0%20-960%20960%20960'%20width='48px'%20fill='%231f1f1f'%3e%3cpath%20d='M450-280H280q-83%200-141.5-58.5T80-480q0-83%2058.5-141.5T280-680h170v60H280q-58.33%200-99.17%2040.76-40.83%2040.77-40.83%2099Q140-422%20180.83-381q40.84%2041%2099.17%2041h170v60ZM325-450v-60h310v60H325Zm185%20170v-60h170q58.33%200%2099.17-40.76%2040.83-40.77%2040.83-99Q820-538%20779.17-579q-40.84-41-99.17-41H510v-60h170q83%200%20141.5%2058.5T880-480q0%2083-58.5%20141.5T680-280H510Z'/%3e%3c/svg%3e"></a>
+                </div>
+                <article class="sekcja-poziomo">
+                    <div>
+                        <h2>1. Instalacja</h2>
+                        <figure>
+                            <h3>Za pomocą pip</h3>
+                            <pole-kodu>pip install sucharypython</pole-kodu>
+                        </figure>
+                        <figure>
+                            <h3>Za pomocą uv (w projekcie)</h3>
+                            <pole-kodu>uv add sucharypython</pole-kodu>
+                        </figure>
+                    </div>
+                    <div>
+                        <h2>2. Wywołanie żartu</h2>
+                        <figure>
+<pole-kodu>from sucharypython import dajKawal
+
+suchar = dajKawal()
+print(suchar)</pole-kodu>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <div style="height: 8rem;"></div>
+        <footer class="stopka-zastrzezenia">
+            <p>&copy; 2026 SucharyAPI. Wszelkie prawa zastrzeżone.</p>
+        </footer>
+
+    </body>
+</html>
