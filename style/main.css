@@ -4,9 +4,12 @@
 
 * {
     font-family: "Bricolage Grotesque", sans-serif;
+    box-sizing: border-box;
 }
 
-body {
+html, body {
     padding: 0;
     margin: 0;
+    width: 100%;
+    overflow-x: hidden;
 }

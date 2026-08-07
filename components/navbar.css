@@ -53,3 +53,28 @@ nav {
 .navbar-guziki:active {
     transform: scale(0.95);
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.8rem;
+    }
+
+    .tekst-suchary {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .navbar-guziki {
+        height: 2.8rem;
+        width: 7rem;
+        font-size: 1rem;
+    }
+}

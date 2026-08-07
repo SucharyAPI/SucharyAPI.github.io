@@ -4,7 +4,9 @@
 }
 
 pole-kodu {
-    display: inline-block;
+    display: block;
+    width: 100%;
+    max-width: 100%;
 }
 
 .kontener-pola-kodu {
@@ -12,11 +14,18 @@ pole-kodu {
     align-items: flex-start;
     justify-content: space-between;
     gap: 0.5rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .kontener-pola-kodu pre {
     margin: 0;
     padding: 0;
+    flex: 1;
+    min-width: 0; /* Uniemożliwia rozpychanie flexboxa */
+    width: 100%;
+    overflow-x: auto; /* Włącza scrollowanie dokładnie wewnątrz ramki pre */
+    -webkit-overflow-scrolling: touch; /* Płynne scrollowanie na iOS (Safari) */
 }
 
 .tresc-pola {
@@ -26,7 +35,10 @@ pole-kodu {
     padding: 0.6rem;
     font-size: 1.6rem;
     border-radius: 0.9rem;
-    white-space: pre;
+    white-space: pre; /* Zachowuje formatowanie bez auto-zawijania */
+    width: max-content; /* Rozciąga czarne tło do końca kodu wewnątrz scrolla */
+    min-width: 100%;
+    box-sizing: border-box;
 }
 
 .guzik-kopiuj-pola-kodu {
@@ -62,4 +74,15 @@ pole-kodu {
 }
 .efekt-skopiowano {
     animation: animacja-skopiowania 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --wymiary-kopiuj: 2.4rem;
+    }
+
+    .tresc-pola {
+        font-size: 1.1rem;
+        padding: 0.5rem;
+    }
 }

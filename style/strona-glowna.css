@@ -59,3 +59,18 @@
 footer {
     padding-left: 3%;
 }
+
+@media (max-width: 768px) {
+    :root {
+        --wymiary-kola: 10.5rem;
+    }
+
+    #guzik-losowania {
+        font-size: 2.5rem;
+    }
+
+    footer {
+        padding-left: 0;
+        text-align: center;
+    }
+}

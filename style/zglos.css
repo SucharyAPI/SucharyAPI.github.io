@@ -77,3 +77,34 @@ main, .tekst {
     width: 9rem;
     height: 9rem;
 }
+
+@media (max-width: 768px) {
+    .tekst {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .guziki {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .zglos {
+        width: 100%;
+        max-width: 22rem;
+        height: auto;
+        min-height: 8rem;
+        border-radius: 3rem;
+    }
+
+    #github img, #forms img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .zglos h3 {
+        font-size: 1.1rem;
+    }
+}

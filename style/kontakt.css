@@ -137,9 +137,24 @@ main > h1 {
 }
 
 @media (max-width: 768px) {
+    main > h1 {
+        font-size: 2.5rem;
+    }
+
     .kontener-kontakt {
         flex-direction: column;
         align-items: stretch;
         gap: 2.5rem;
+    }
+
+    #formularz-kontaktowy input[type="text"],
+    #formularz-kontaktowy input[type="email"],
+    #formularz-kontaktowy textarea,
+    #guzik-wyslij {
+        max-width: 100%;
+    }
+
+    .kontakt-napisy h1 {
+        font-size: 1.4rem;
     }
 }

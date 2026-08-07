@@ -41,3 +41,21 @@ main {
     width: 85%;
     margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+    .sekcja-instalacji,
+    .oddzielacz,
+    .stopka-zastrzezenia {
+        width: 92%;
+    }
+
+    .sekcja-instalacji h1 {
+        font-size: 1.8rem;
+    }
+
+    .naglowek-sekcji, .sekcja-poziomo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+}
