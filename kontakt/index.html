@@ -8,7 +8,33 @@
         <link rel="stylesheet" href="../style/kontakt.css">
     </head>
     <body>
-
+        <main>
+            <h1>Kontakt</h1>
+            <div class="kontener-kontakt">
+                <form id="formularz-kontaktowy">
+                    <h2>Formularz kontaktowy</h2>
+                    <div class="pole-formularza">
+                        <label for="imie">Wprowadź swoje imię i nazwisko: </label>
+                        <input type="text" id="imie" name="imie" required placeholder="np. Jan Kowalski">
+                    </div>
+                    <div class="pole-formularza">
+                        <label for="email">Wprowadź swój email: </label>
+                        <input type="email" id="email" name="email" required placeholder="np. jankowalski@mail.com">
+                    </div>
+                    <div class="pole-formularza">
+                        <label for="tresc">Wprowadź treść wiadomości: </label>
+                        <textarea id="tresc" name="tresc" rows="6" required placeholder="Wpisz treść wiadomości..."></textarea>
+                    </div>
+                    <input type="checkbox" name="botcheck" style="display: none;">
+                    <button type="submit" id="guzik-wyslij">Wyślij</button>
+                </form>
+                <div class="kontakt-napisy">
+                    <h2>Skontaktuj się z nami poprzez email</h2>
+                    <h1>sucharyapi@gmail.com</h1>
+                    <a href="mailto:sucharyapi@gmail.com" class="guzik-mail">Wyślij do nas maila</a>
+                </div>
+            </div>
+        </main>
         <script type="module" src="../scripts/kontakt.ts"></script>
     </body>
 </html>

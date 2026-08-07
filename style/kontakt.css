@@ -1,1 +1,145 @@
 /* Arkusz stylów dla strony kontaktu */
+
+main {
+    padding: 2rem 1.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > h1 {
+    font-size: 3.5rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.kontener-kontakt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    width: 100%;
+    max-width: 1100px;
+}
+
+#formularz-kontaktowy,
+.kontakt-napisy {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#formularz-kontaktowy h2,
+.kontakt-napisy h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.kontakt-napisy h1 {
+    font-size: 2rem;
+    color: maroon;
+    word-break: break-all;
+    margin-top: 0.5rem;
+}
+
+.pole-formularza {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.pole-formularza label {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+#formularz-kontaktowy input[type="text"],
+#formularz-kontaktowy input[type="email"],
+#formularz-kontaktowy textarea {
+    width: 100%;
+    max-width: 26rem;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0.2rem solid maroon;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#formularz-kontaktowy textarea {
+    resize: none;
+    height: 9rem;
+    font-family: inherit;
+}
+
+#formularz-kontaktowy input:focus,
+#formularz-kontaktowy textarea:focus {
+    outline: none;
+    border-color: maroon;
+    box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
+}
+
+#guzik-wyslij {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0.2rem solid maroon;
+    background-color: maroon;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    width: 100%;
+    max-width: 26rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+#guzik-wyslij:hover {
+    transform: scale(1.02);
+    background-color: darkred;
+}
+
+#guzik-wyslij:active {
+    transform: scale(0.98);
+}
+
+.guzik-mail {
+    text-decoration: none;
+    border: 0.1rem solid maroon;
+    border-radius: 0.4rem;
+    text-align: center;
+    background-color: maroon;
+    color: white;
+    font-size: 1.8rem;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                background-color 0.2s ease, 
+                box-shadow 0.2s ease;
+    box-shadow: 0 0.2rem 0.5rem rgba(128, 0, 0, 0.15);
+}
+.guzik-mail:hover {
+    background-color: darkred;
+    border-color: darkred;
+    transform: translateY(-0.15rem);
+    box-shadow: 0 0.5rem 1.2rem rgba(128, 0, 0, 0.35);
+}
+.guzik-mail:active {
+    transform: translateY(0.1rem) scale(0.97);
+    box-shadow: 0 0.1rem 0.3rem rgba(128, 0, 0, 0.2);
+    transition-duration: 0.05s;
+}
+
+@media (max-width: 768px) {
+    .kontener-kontakt {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2.5rem;
+    }
+}
