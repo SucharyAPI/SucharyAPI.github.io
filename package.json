@@ -1,0 +1,21 @@
+{
+  "name": "sucharyapi-strona",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.15.0",
+    "sucharyjs": "^1.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@tailwindcss/vite": "^4.1.14",
+    "tailwindcss": "^4.1.14",
+    "typescript": "^5.9.3"
+  }
+}

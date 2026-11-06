@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bordo: #8f1839;
+  --color-bordo-ciemne: #651129;
+  --color-bordo-jasne: #f2c8d2;
+  --color-krem: #fff8f1;
+  --color-atrament: #241a1d;
+  --color-przyciszony: #765d64;
+  --color-rozowy: #ffb6c8;
+  --font-sans: "Bricolage Grotesque", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 bg-krem font-sans text-atrament;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+}

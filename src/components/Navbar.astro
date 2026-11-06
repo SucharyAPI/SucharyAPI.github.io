@@ -1,0 +1,20 @@
+---
+const linki = [
+  { href: '/#o-projekcie', tekst: 'O projekcie' },
+  { href: '/#masakr', tekst: 'Masakra' },
+  { href: '/szybki-start/', tekst: 'Szybki start' },
+  { href: '/zglos/', tekst: 'Zgłoś kawał' },
+  { href: '/kontakt/', tekst: 'Kontakt' },
+];
+---
+
+<header class="sticky top-0 z-10 flex items-center justify-between bg-bordo px-5 py-5 text-white sm:px-[5vw] lg:px-22">
+  <a class="flex items-center gap-2.5 text-[1.35rem] font-extrabold" href="/" aria-label="SucharyAPI — strona główna">
+    <span class="flex size-8 items-center justify-center rounded-full bg-white text-bordo">S</span>
+    <span>Suchary<span class="text-rozowy">API</span></span>
+  </a>
+  <nav class="flex items-center gap-3 text-sm sm:gap-7" aria-label="Główna nawigacja">
+    {linki.map((link) => <a class="hidden hover:text-bordo-jasne sm:inline" href={link.href}>{link.tekst}</a>)}
+    <a class="inline-flex items-center gap-2 rounded-full border-2 border-white bg-white px-4 py-2.5 font-bold text-bordo" href="https://github.com/SucharyAPI/SucharyAPI.github.io" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>

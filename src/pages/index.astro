@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Baza żartów">
+  <section id="start" class="grid min-h-162.5 items-center gap-12 bg-bordo px-5 py-20 text-white sm:px-[8vw] lg:grid-cols-[1.1fr_.9fr] lg:gap-[8vw] lg:px-34">
+    <div>
+      <p class="mb-5 text-xs font-extrabold tracking-[.16em] text-rozowy">OPEN SOURCE · v2.0.0</p>
+      <h1 class="mb-8 text-[clamp(3.8rem,8vw,7.4rem)] font-extrabold leading-[.88] tracking-[-.075em]">Humor, który<br /><span class="text-rozowy">możesz wywołać.</span></h1>
+      <p class="max-w-xl text-lg leading-relaxed text-[#ffe4e9]">SucharyAPI to ogólnopolska baza żartów i proste API dla każdego, kto chce dodać odrobinę polskiego humoru do swojej aplikacji.</p>
+      <div class="mt-9 flex flex-wrap items-center gap-6">
+        <a class="inline-flex items-center gap-3 rounded-full border-2 border-white bg-white px-5 py-3.5 font-bold text-bordo transition hover:-translate-y-0.5 hover:shadow-lg" href="/szybki-start/">Zacznij w kilka minut <span aria-hidden="true">→</span></a>
+        <a class="font-bold hover:text-bordo-jasne" href="#o-projekcie">Dowiedz się więcej <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+    <div class="rotate-2 rounded-2xl bg-krem p-6 text-atrament shadow-[1rem_1rem_0_#65112940] sm:p-10" aria-live="polite">
+      <div class="text-xs font-extrabold tracking-[.14em] text-przyciszony"><span class="mr-1 inline-block size-2 rounded-full bg-[#d34b6e]"></span> LOSOWY SUCHAREK</div>
+      <p id="pole-kawalu" class="my-14 min-h-20 text-2xl font-bold leading-tight">Kliknij przycisk i sprawdź, co dziś serwuje baza.</p>
+      <button id="guzik-losowania" class="cursor-pointer w-full border-0 border-t border-[#e5cfd4] bg-transparent pt-5 text-left font-bold text-bordo hover:text-bordo-ciemne" type="button">Losuj kawał <span aria-hidden="true">↗</span></button>
+    </div>
+  </section>
+
+  <section id="masakr" class="grid gap-10 bg-bordo px-5 py-20 text-white sm:px-[8vw] lg:grid-cols-[.9fr_1.1fr] lg:items-center lg:px-34 lg:py-28">
+    <div>
+      <p class="mb-5 text-xs font-extrabold tracking-[.16em] text-rozowy">NOWOŚĆ · PROJEKT SATYRYCZNY</p>
+      <h2 class="text-[clamp(2.8rem,6vw,5.5rem)] font-extrabold leading-[.9] tracking-[-.065em]">Masakra.<br /><span class="text-rozowy">Powiedz to głośniej.</span></h2>
+      <p class="mt-8 max-w-xl text-lg leading-relaxed text-[#ffe4e9]">Generator satyrycznych wypowiedzi, które brzmią jak komentarze z najbardziej absurdalnej debaty. Losuj masakry, baw się i pamiętaj, że to tylko fikcja.</p>
+      <div class="mt-8 grid gap-3 text-sm sm:grid-cols-3">
+        <a class="rounded-xl border border-[#c76a84] bg-bordo-ciemne p-4 transition hover:-translate-y-0.5 hover:border-rozowy" href="https://sucharyapi.onrender.com/masakra" target="_blank" rel="noreferrer"><strong class="mb-1 block text-rozowy">Nowy endpoint API</strong><span class="text-[#ffe4e9]">/masakra ↗</span></a>
+        <a class="rounded-xl border border-[#c76a84] bg-bordo-ciemne p-4 transition hover:-translate-y-0.5 hover:border-rozowy" href="/szybki-start/#masakra-cli"><strong class="mb-1 block text-rozowy">Nowe narzędzie CLI</strong><span class="text-[#ffe4e9]">masakra-cli →</span></a>
+        <a class="rounded-xl border border-[#c76a84] bg-bordo-ciemne p-4 transition hover:-translate-y-0.5 hover:border-rozowy" href="/szybki-start/#suchary-js"><strong class="mb-1 block text-rozowy">Funkcje w bibliotekach</strong><span class="text-[#ffe4e9]">masakra() · wieleMasakr()</span></a>
+      </div>
+      <a class="mt-8 inline-flex items-center gap-3 rounded-full border-2 border-white bg-white px-5 py-3.5 font-bold text-bordo transition hover:-translate-y-0.5 hover:shadow-lg" href="https://github.com/SucharyAPI/masakra-cli" target="_blank" rel="noreferrer">Poznaj projekt masakra-cli <span aria-hidden="true">↗</span></a>
+    </div>
+    <aside class="rounded-2xl border border-[#c76a84] bg-bordo-ciemne p-4 sm:p-5">
+      <div class="mb-4 flex items-center justify-between border-b border-[#a84966] pb-3">
+        <span class="text-[.65rem] font-extrabold tracking-[.16em] text-rozowy">WAŻNE</span>
+        <span class="rounded-full bg-rozowy px-2.5 py-1 text-[.65rem] font-bold text-bordo">DISCLAIMER</span>
+      </div>
+      <p class="text-xs leading-relaxed text-[#ffe4e9]">Aplikacja oraz wygenerowane przez nią treści mają charakter wyłącznie satyryczny i rozrywkowy. Wypowiedzi generowane są losowo i nie odzwierciedlają poglądów autora ani organizacji SucharyAPI. Wszelkie podobieństwo do rzeczywistych osób, zdarzeń czy stylu wypowiedzi jest całkowicie przypadkowe.</p>
+    </aside>
+  </section>
+
+  <section id="o-projekcie" class="bg-krem px-5 py-20 sm:px-[8vw] lg:px-34 lg:py-32">
+    <div class="mb-14">
+      <p class="mb-5 text-xs font-extrabold tracking-[.16em] text-bordo">DLACZEGO SUCHARYAPI?</p>
+      <h2 class="text-[clamp(2.6rem,5vw,5rem)] font-extrabold leading-[.95] tracking-[-.065em]">Mały projekt.<br /><span class="text-bordo">Dużo śmiechu.</span></h2>
+    </div>
+    <div class="grid gap-0 md:grid-cols-3">
+      <article class="border-t border-[#dcbfc5] py-6 pr-8"><span class="text-xs font-extrabold text-bordo">01</span><h3 class="my-14 text-2xl font-bold">Proste API</h3><p class="leading-relaxed text-przyciszony">Jedna funkcja wystarczy, żeby pobrać świeży żart. Bez konfiguracji i zbędnych zależności.</p></article>
+      <article class="border-t border-[#dcbfc5] py-6 pr-8 md:pl-8"><span class="text-xs font-extrabold text-bordo">02</span><h3 class="my-14 text-2xl font-bold">Otwarta baza</h3><p class="leading-relaxed text-przyciszony">Każdy może dodać własny kawał przez GitHub lub formularz Google i współtworzyć projekt.</p></article>
+      <article class="border-t border-[#dcbfc5] py-6 pr-8 md:pl-8"><span class="text-xs font-extrabold text-bordo">03</span><h3 class="my-14 text-2xl font-bold">Polski humor</h3><p class="leading-relaxed text-przyciszony">Suchary, które znasz z rodzinnych spotkań, teraz dostępne w Twojej aplikacji.</p></article>
+    </div>
+  </section>
+
+  <section class="grid gap-12 bg-atrament px-5 py-20 text-white sm:px-[8vw] lg:grid-cols-[.8fr_1.2fr] lg:px-34 lg:py-32">
+    <div class="mb-14">
+      <p class="mb-5 text-xs font-extrabold tracking-[.16em] text-rozowy">SZYBKI START</p>
+      <h2 class="text-[clamp(2.6rem,5vw,5rem)] font-extrabold leading-[.95] tracking-[-.065em]">Dodaj suchara<br /><span class="text-rozowy">do swojego kodu.</span></h2>
+      <p class="mt-8 max-w-xs leading-relaxed text-[#cbbbc0]">Biblioteka <code class="text-rozowy">sucharyjs</code> pozwala zacząć bezpośrednio w TypeScript.</p>
+    </div>
+    <div class="overflow-hidden rounded-xl border border-[#60454c] bg-[#33262a]">
+      <div class="flex items-center gap-1.5 bg-[#3d2c31] p-3"><span class="size-2 rounded-full bg-[#c5798e]"></span><span class="size-2 rounded-full bg-[#c5798e]"></span><span class="size-2 rounded-full bg-[#c5798e]"></span><small class="ml-auto text-[#ad979d]">przyklad.ts</small></div>
+      <pre class="overflow-auto p-6 font-mono text-base leading-relaxed text-[#f5e8e7]"><code><i class="text-rozowy not-italic">import</i> &#123; dajKawal &#125; <i class="text-rozowy not-italic">from</i> <b class="text-[#ffd1a5]">'sucharyjs'</b>;
+
+<i class="text-rozowy not-italic">const</i> suchar = <i class="text-rozowy not-italic">await</i> dajKawal();
+console.log(suchar);</code></pre>
+      <a class="block border-t border-[#60454c] p-4 text-sm text-rozowy" href="/szybki-start/">Zobacz pełną instrukcję <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  import { ConnectionError, dajKawal, HTTPError, TimeoutError } from 'sucharyjs';
+
+  const guzikLosowania = document.querySelector<HTMLButtonElement>('#guzik-losowania');
+  const poleKawalu = document.querySelector<HTMLElement>('#pole-kawalu');
+
+  guzikLosowania?.addEventListener('click', async () => {
+    if (!poleKawalu || !guzikLosowania) return;
+    guzikLosowania.disabled = true;
+    poleKawalu.textContent = 'Losowanie...';
+    try {
+      poleKawalu.textContent = await dajKawal();
+    } catch (blad: unknown) {
+      if (blad instanceof HTTPError) poleKawalu.textContent = 'Baza chwilowo odpoczywa. Spróbuj ponownie za chwilę.';
+      else if (blad instanceof TimeoutError) poleKawalu.textContent = 'Za dużo osób chce się pośmiać. Spróbuj ponownie później.';
+      else if (blad instanceof ConnectionError) poleKawalu.textContent = 'Brak połączenia. Sprawdź internet i spróbuj ponownie.';
+      else poleKawalu.textContent = 'Nie udało się pobrać kawału. Spróbuj ponownie.';
+    } finally {
+      guzikLosowania.disabled = false;
+    }
+  });
+</script>

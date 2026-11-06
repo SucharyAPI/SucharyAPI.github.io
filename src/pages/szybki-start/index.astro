@@ -1,0 +1,195 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+interface Biblioteka {
+  numer: string;
+  identyfikator: string;
+  nazwa: string;
+  jezyk: string;
+  opis: string;
+  repozytorium: string;
+  instalacja: { nazwa: string; komenda: string }[];
+  przyklad: string;
+}
+
+const biblioteki: Biblioteka[] = [
+  {
+    numer: '01',
+    identyfikator: 'suchary-cli',
+    nazwa: 'SucharyCLI',
+    jezyk: 'Narzędzie terminalowe',
+    opis: 'Losuj suchary bezpośrednio z terminala, bez pisania kodu.',
+    repozytorium: 'https://github.com/SucharyAPI/suchary-cli',
+    instalacja: [
+      { nazwa: 'Linux / macOS', komenda: 'curl -fsSL https://raw.githubusercontent.com/SucharyAPI/suchary-cli/main/install.sh | sh' },
+      { nazwa: 'Windows PowerShell', komenda: 'irm https://raw.githubusercontent.com/SucharyAPI/suchary-cli/main/install.ps1 | iex' },
+      { nazwa: 'Homebrew', komenda: 'brew install sucharyapi/tap/suchar' },
+      { nazwa: 'Winget', komenda: 'winget install SucharyAPI.SucharyCLI' },
+    ],
+    przyklad: 'suchar',
+  },
+  {
+    numer: '02',
+    identyfikator: 'masakra-cli',
+    nazwa: 'masakra-cli',
+    jezyk: 'Narzędzie terminalowe',
+    opis: 'Oficjalne narzędzie do generowania satyrycznych wypowiedzi w terminalu.',
+    repozytorium: 'https://github.com/SucharyAPI/masakra-cli',
+    instalacja: [
+      { nazwa: 'Homebrew', komenda: 'brew install sucharyapi/tap/masakra' },
+    ],
+    przyklad: 'masakra',
+  },
+  {
+    numer: '03',
+    identyfikator: 'suchary-ruby',
+    nazwa: 'SucharyPL',
+    jezyk: 'Ruby',
+    opis: 'Biblioteka Ruby z prostym interfejsem do pobierania żartów.',
+    repozytorium: 'https://github.com/SucharyAPI/sucharypl-ruby',
+    instalacja: [
+      { nazwa: 'Gem globalnie', komenda: 'gem install sucharyruby' },
+      { nazwa: 'Bundler w projekcie', komenda: 'bundle add sucharyruby' },
+    ],
+    przyklad: `require "sucharyruby"
+
+suchar = Sucharyruby.dajKawal
+puts suchar`,
+  },
+  {
+    numer: '04',
+    identyfikator: 'suchary-go',
+    nazwa: 'SucharyPL',
+    jezyk: 'Go',
+    opis: 'Typowana biblioteka Go z obsługą błędów po stronie aplikacji.',
+    repozytorium: 'https://github.com/SucharyAPI/sucharypl-go',
+    instalacja: [
+      { nazwa: 'go get', komenda: 'go get github.com/SucharyAPI/sucharypl-go' },
+    ],
+    przyklad: `package main
+
+import (
+    "fmt"
+    "log"
+
+    sucharygo "github.com/SucharyAPI/sucharypl-go"
+)
+
+func main() {
+    zart, err := sucharygo.DajKawal()
+    if err != nil {
+        log.Fatalf("Błąd: %v", err)
+    }
+    fmt.Println(zart)
+}`,
+  },
+  {
+    numer: '05',
+    identyfikator: 'suchary-dart',
+    nazwa: 'SucharyPL',
+    jezyk: 'Dart',
+    opis: 'Pakiet dla aplikacji Dart i Flutter.',
+    repozytorium: 'https://github.com/SucharyAPI/sucharypl-dart',
+    instalacja: [
+      { nazwa: 'Dart Pub', komenda: 'dart pub add sucharydart' },
+      { nazwa: 'Flutter', komenda: 'flutter pub add sucharydart' },
+    ],
+    przyklad: `import 'package:sucharydart/sucharydart.dart';
+
+void main() async {
+  final suchar = await dajKawal();
+  print(suchar);
+}`,
+  },
+  {
+    numer: '06',
+    identyfikator: 'suchary-js',
+    nazwa: 'SucharyPL',
+    jezyk: 'JS',
+    opis: 'Biblioteka dla ekosystemu Javascript.',
+    repozytorium: 'https://github.com/SucharyAPI/sucharypl-js',
+    instalacja: [
+      { nazwa: 'npm', komenda: 'npm install sucharyjs' },
+      { nazwa: 'Bun', komenda: 'bun add sucharyjs' },
+    ],
+    przyklad: `import { dajKawal, masakra } from 'sucharyjs';
+
+const suchar = await dajKawal();
+console.log(suchar);
+
+const masakra = await masakra();
+console.log(masakra);`,
+  },
+  {
+    numer: '07',
+    identyfikator: 'suchary-python',
+    nazwa: 'SucharyPL',
+    jezyk: 'Python',
+    opis: 'Lekki pakiet Python do użycia w skryptach i aplikacjach.',
+    repozytorium: 'https://github.com/SucharyAPI/sucharypl-python',
+    instalacja: [
+      { nazwa: 'pip', komenda: 'pip install sucharypython' },
+      { nazwa: 'uv w projekcie', komenda: 'uv add sucharypython' },
+    ],
+    przyklad: `from sucharypython import dajKawal, masakra
+
+suchar = dajKawal()
+print(suchar)
+
+masakra = masakra()
+print(masakra)`,
+  },
+];
+---
+
+<Layout title="Szybki start">
+  <section class="px-5 py-20 sm:px-[8vw] lg:px-34 lg:py-32">
+    <div class="max-w-3xl">
+      <p class="mb-5 text-xs font-extrabold tracking-[.16em] text-bordo">SZYBKI START</p>
+      <h1 class="text-[clamp(3.8rem,8vw,7.4rem)] font-extrabold leading-[.88] tracking-[-.075em]">Wybierz swój<br /><span class="text-bordo">sposób na suchara.</span></h1>
+      <p class="mt-8 max-w-2xl text-lg leading-relaxed text-przyciszony">SucharyAPI jest dostępne w kilku językach oraz jako narzędzie terminalowe. Wybierz bibliotekę, skopiuj instalację i zacznij korzystać.</p>
+    </div>
+
+    <div class="mt-20 space-y-8">
+      {biblioteki.map((biblioteka) => (
+        <section class="overflow-hidden rounded-2xl border border-[#ead8d8] bg-white shadow-sm" id={biblioteka.identyfikator}>
+          <header class="flex flex-col gap-5 border-b border-[#ead8d8] bg-[#fffaf7] p-6 sm:flex-row sm:items-start sm:justify-between sm:p-8">
+            <div class="flex items-start gap-4">
+              <span class="flex size-11 shrink-0 items-center justify-center rounded-full bg-bordo text-sm font-extrabold text-white">{biblioteka.numer}</span>
+              <div>
+                <p class="mb-1 text-xs font-extrabold uppercase tracking-[.16em] text-bordo">{biblioteka.jezyk}</p>
+                <h2 class="text-2xl font-extrabold tracking-tight text-atrament sm:text-3xl">{biblioteka.nazwa}{biblioteka.jezyk !== 'Narzędzie terminalowe' && ` - ${biblioteka.jezyk}`}</h2>
+                <p class="mt-2 max-w-xl leading-relaxed text-przyciszony">{biblioteka.opis}</p>
+              </div>
+            </div>
+            <a class="inline-flex shrink-0 items-center gap-2 font-bold text-bordo hover:text-bordo-ciemne" href={biblioteka.repozytorium} target="_blank" rel="noreferrer">Repozytorium <span aria-hidden="true">↗</span></a>
+          </header>
+
+          <div class="grid gap-8 p-6 sm:p-8 lg:grid-cols-[.8fr_1.2fr]">
+            <div>
+              <h3 class="mb-4 text-sm font-extrabold uppercase tracking-[.12em] text-atrament">Instalacja</h3>
+              <div class="space-y-3">
+                {biblioteka.instalacja.map((instalacja) => (
+                  <div class="rounded-lg border border-[#ead8d8] bg-krem p-3">
+                    <p class="mb-2 text-xs font-bold text-przyciszony">{instalacja.nazwa}</p>
+                    <code class="block overflow-x-auto whitespace-pre-wrap break-all text-sm text-bordo">{instalacja.komenda}</code>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div class="mb-4 flex items-center justify-between gap-4">
+                <h3 class="text-sm font-extrabold uppercase tracking-[.12em] text-atrament">Przykład użycia · {biblioteka.jezyk}</h3>
+                <span class="rounded-full bg-bordo-jasne px-3 py-1 text-xs font-bold text-bordo">kod</span>
+              </div>
+              <div class="overflow-hidden rounded-xl bg-atrament">
+                <pre class="overflow-x-auto p-5 text-sm leading-relaxed text-[#f5e8e7]"><code>{biblioteka.przyklad}</code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+      ))}
+    </div>
+  </section>
+</Layout>
