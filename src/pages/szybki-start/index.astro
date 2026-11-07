@@ -37,6 +37,8 @@ const biblioteki: Biblioteka[] = [
     repozytorium: 'https://github.com/SucharyAPI/masakra-cli',
     instalacja: [
       { nazwa: 'Homebrew', komenda: 'brew install sucharyapi/tap/masakra' },
+      { nazwa: 'Linux / macOS', komenda: 'curl -fsSl https://raw.githubusercontent.com/SucharyAPI/masakra-cli/main/install.sh | sh'},
+      { nazwa: 'Windows Powershell', komenda: 'irm https://raw.githubusercontent.com/SucharyAPI/masakra-cli/main/install.ps1 | iex'}
     ],
     przyklad: 'masakra',
   },
@@ -54,7 +56,10 @@ const biblioteki: Biblioteka[] = [
     przyklad: `require "sucharyruby"
 
 suchar = Sucharyruby.dajKawal
-puts suchar`,
+puts suchar
+
+masakra = Sucharyruby.masakra
+puts masakra`,
   },
   {
     numer: '04',
@@ -69,18 +74,24 @@ puts suchar`,
     przyklad: `package main
 
 import (
-    "fmt"
-    "log"
+  "fmt"
+  "log"
 
-    sucharygo "github.com/SucharyAPI/sucharypl-go"
+  sucharygo "github.com/SucharyAPI/sucharypl-go"
 )
 
 func main() {
-    zart, err := sucharygo.DajKawal()
-    if err != nil {
-        log.Fatalf("Błąd: %v", err)
-    }
-    fmt.Println(zart)
+  zart, err := sucharygo.DajKawal()
+  if err != nil {
+    log.Fatalf("Błąd: %v", err)
+  }
+  fmt.Println(zart)
+
+  masakra = sucharygo.Masakra()
+  if err != nil {
+    log.Fatalf("Błąd: %v", err)
+  }
+  fmt.Println(masakra)
 }`,
   },
   {
@@ -99,6 +110,9 @@ func main() {
 void main() async {
   final suchar = await dajKawal();
   print(suchar);
+
+  final masakra = await masakra();
+  print(masakra);
 }`,
   },
   {
